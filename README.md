@@ -1,5 +1,4 @@
-```
-# 🌟 Personal Portfolio | Anurag Aryan
+# ✨ Personal Portfolio | Anurag Aryan
 
 Welcome to the personal portfolio repository of **Anurag Aryan**! 🚀 Explore my journey in engineering, full-stack development, robotics, IoT, and drones through this interactive and captivating website.  
 
@@ -7,7 +6,7 @@ Welcome to the personal portfolio repository of **Anurag Aryan**! 🚀 Explore m
 
 ---
 
-## 📖 About Me
+## 📚 About Me
 I am an **Electrical Engineering student** at the **National Institute of Technology, Patna**, passionate about **innovation** and **problem-solving** in:
 - ⚙️ **Robotics**
 - 🌐 **Full-Stack Development**
@@ -22,7 +21,7 @@ With a focus on bridging the gap between theory and application, my projects and
 This portfolio highlights:
 - 📱 **Responsive Design**: Seamlessly adapts to all screen sizes.
 - 🎨 **Modern Animations**: Smooth transitions and interactive elements for an engaging experience.
-- 🗂️ **Well-Organized Sections**: Projects, skills, and achievements are showcased for easy navigation.
+- 🔂 **Well-Organized Sections**: Projects, skills, and achievements are showcased for easy navigation.
 
 ---
 
@@ -30,7 +29,7 @@ This portfolio highlights:
 - ⚛️ **React**
 - 🌐 **Next.js**
 - 🎨 **Tailwind CSS**
-- 🛠️ **Framer Motion** (animations)
+- 🔧 **Framer Motion** (animations)
 - 🎵 **Howler.js** (audio effects)
 
 ---
@@ -58,7 +57,7 @@ Follow these steps to set up the project on your local machine:
    npm run dev
    ```
 
-5. Open your browser at `http://localhost:3000` to explore the portfolio. 🌟
+5. Open your browser at `http://localhost:3000` to explore the portfolio. ✨
 
 ---
 
@@ -72,7 +71,7 @@ Key components of the project:
 ---
 
 ## 🤝 Contributing
-Contributions are welcome! 📝  
+Contributions are welcome! 🖍️  
 - Fork this repository.  
 - Create a new branch for your feature or bug fix.  
 - Submit a pull request with a clear explanation of your changes.  
@@ -94,5 +93,4 @@ For inquiries or collaboration, feel free to reach out:
 ---
 
 Made with ❤️ by **Anurag Aryan** ✨
-```
 
