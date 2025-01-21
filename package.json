@@ -1,5 +1,9 @@
 {
   "name": "akb-portfolio",
+  "version": "1.0.0",
+  "description": "A personal portfolio showcasing projects, skills, and achievements.",
+  "author": "Anurag Kumar Bharti",
+  "license": "MIT",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -34,5 +38,19 @@
     "eslint-config-next": "^14.2.13",
     "postcss": "^8.4.28",
     "tailwindcss": "^3.3.3"
+  },
+  "keywords": [
+    "portfolio",
+    "next.js",
+    "react",
+    "tailwindcss",
+    "personal-website"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/i-akb25/akb-portfolio.git"
+  },
+  "bugs": {
+    "url": "https://github.com/i-akb25/akb-portfolio/issues"
   }
 }
