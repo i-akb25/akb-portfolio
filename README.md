@@ -1,4 +1,4 @@
-```markdown
+```
 # 🌟 Personal Portfolio | Anurag Aryan
 
 Welcome to the personal portfolio repository of **Anurag Aryan**! 🚀 Explore my journey in engineering, full-stack development, robotics, IoT, and drones through this interactive and captivating website.  
