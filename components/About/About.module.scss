@@ -1,0 +1,128 @@
+.aboutContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 40px; /* Original padding */
+  margin-left: 42px; /* Adjusted left margin */
+  margin-right: 42px;
+  color: #fff;
+}
+
+.leftSection {
+  flex: 1; /* Occupy equal space */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Align content to the left */
+}
+
+.heading {
+  margin-bottom: 20px;
+
+  p {
+    text-transform: uppercase;
+    font-size: 1rem;
+    color: #aaa;
+    letter-spacing: 2px;
+  }
+
+  h1 {
+    font-size: 3rem;
+    background: linear-gradient(90deg, hsl(279, 77%, 32%)270360);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+.profile {
+  margin-top: 50px;
+  text-align: center;
+  align-content: center;
+  align-items: center;
+  margin-left: 20px;
+
+  .profileImage {
+    border-radius: 50%;
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border: 3px solid #930cd6;
+    margin-bottom: 10px;
+    align-content: center !important;
+    margin-left: 20px;
+  }
+
+  .name {
+    font-size: 1.5rem;
+    font-weight: bold;
+    align-content: center;
+  }
+
+  .jobTitle {
+    font-size: 1rem;
+    color: #ccc;
+    // margin: 5px 0;
+    align-content: center;
+  }
+
+  .hireButton {
+    padding: 10px 30px;
+    align-content: center;
+
+    .link {
+      color: white;
+      text-decoration: none;
+    }
+  }
+}
+
+.rightSection {
+  flex: 2; /* Occupy more space */
+  margin-top: 100px; /* Adjust paragraph starting position */
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+
+  .aboutText,
+  .currentWork,
+  .openSource {
+    line-height: 1.8;
+    text-align: justify;
+    margin-bottom: 20px;
+  }
+
+  .highlight {
+    color: #ff4f00;
+    font-weight: bold;
+  }
+
+  .mailLink,
+  .whatsappLink {
+    color: #ff4f00;
+    text-decoration: none;
+    font-weight: bold;
+
+    &:hover {
+      text-decoration: underline;
+      color: #ffaa00;
+    }
+  }
+
+  .interest {
+    font-style: italic;
+    color: #0e55c8;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .aboutContainer {
+    flex-direction: column;
+    align-items: center;
+    margin: 20px; /* Smaller margin for small screens */
+  }
+
+  .rightSection {
+    margin-top: 30px; /* Adjusted for smaller screens */
+  }
+}

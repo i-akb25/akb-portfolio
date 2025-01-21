@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
+  <rect width="100%" height="100%" fill="#f0f0f0"/>
+  <text x="50%" y="50" font-size="30" text-anchor="middle" fill="#333">Technologies</text>
+  <text x="50%" y="100" font-size="20" text-anchor="middle" fill="#333">GSAP</text>
+  <text x="50%" y="150" font-size="20" text-anchor="middle" fill="#333">WebRTC</text>
+  <text x="50%" y="200" font-size="20" text-anchor="middle" fill="#333">Socket.IO</text>
+  <text x="50%" y="250" font-size="20" text-anchor="middle" fill="#333">Node.js</text>
+  <text x="50%" y="300" font-size="20" text-anchor="middle" fill="#333">Python</text>
+  <text x="50%" y="350" font-size="20" text-anchor="middle" fill="#333">Arduino</text>
+  <text x="50%" y="400" font-size="20" text-anchor="middle" fill="#333">HTML</text>
+  <text x="50%" y="450" font-size="20" text-anchor="middle" fill="#333">CSS</text>
+  <text x="50%" y="500" font-size="20" text-anchor="middle" fill="#333">JavaScript</text>
+</svg>
