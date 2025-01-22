@@ -5,6 +5,7 @@
   "author": "Anurag Kumar Bharti",
   "license": "MIT",
   "private": true,
+  
   "scripts": {
     "dev": "next dev",
     "build": "next build",
