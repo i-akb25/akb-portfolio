@@ -148,6 +148,16 @@ export const PROJECTS = [
     tech: ["react", "nodejs", "css"],
   },
   {
+    name: "Safar Awaits",
+    image: "/projects/safarawaits.png",
+    blurImage: "/projects/blur/safarawaits.png",
+    description:
+      "The one stop solution for Unwinding in Unforgettable Destinations using ReactJS + NodeJS",
+    gradient: ["#000066", "#6699FF"],
+    url: "https://safar-awaits.netlify.app/",
+    tech: ["react", "JS", "css"],
+  },
+  {
     name: "Ink Stain",
     image: "/projects/inkstain.jpg",
     blurImage: "/projects/blur/inkstain-blur.jpg",
