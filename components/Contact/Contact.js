@@ -1,7 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import Filter from "bad-words";
 import toast, { Toaster } from "react-hot-toast";
-import Fade from "react-reveal/Fade";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import mail from "./mailer";
@@ -277,57 +276,55 @@ const Contact = () => {
             </h2>
 
             <form className="pt-10 sm:mx-auto sm:w-[30rem] md:w-[35rem] staggered-reveal">
-              <Fade bottom distance={"4rem"}>
-                <div className="relative">
-                  <input
-                    type="text"
-                    id="name"
-                    className="block w-full h-12 sm:h-14 px-4 text-xl sm:text-2xl font-mono outline-none border-2 border-purple bg-transparent rounded-[0.6rem] transition-all duration-200"
-                    value={formData.name}
-                    onChange={handleChange}
-                    required
-                  />
-                  <label
-                    htmlFor="name"
-                    className="absolute top-0 left-0 h-full flex items-center pl-4 text-lg font-mono transform transition-all"
-                  >
-                    Name
-                  </label>
-                </div>
+              <div className="relative">
+                <input
+                  type="text"
+                  id="name"
+                  className="block w-full h-12 sm:h-14 px-4 text-xl sm:text-2xl font-mono outline-none border-2 border-purple bg-transparent rounded-[0.6rem] transition-all duration-200"
+                  value={formData.name}
+                  onChange={handleChange}
+                  required
+                />
+                <label
+                  htmlFor="name"
+                  className="absolute top-0 left-0 h-full flex items-center pl-4 text-lg font-mono transform transition-all"
+                >
+                  Name
+                </label>
+              </div>
 
-                <div className="relative mt-14">
-                  <input
-                    type="text"
-                    id="email"
-                    className="block w-full h-12 sm:h-14 px-4 text-xl sm:text-2xl font-mono outline-none border-2 border-purple bg-transparent rounded-[0.6rem] transition-all duration-200"
-                    value={formData.email}
-                    onChange={handleChange}
-                    required
-                  />
-                  <label
-                    htmlFor="email"
-                    className="absolute top-0 left-0 h-full flex items-center pl-4 text-lg font-mono transform transition-all"
-                  >
-                    Email
-                  </label>
-                </div>
+              <div className="relative mt-14">
+                <input
+                  type="text"
+                  id="email"
+                  className="block w-full h-12 sm:h-14 px-4 text-xl sm:text-2xl font-mono outline-none border-2 border-purple bg-transparent rounded-[0.6rem] transition-all duration-200"
+                  value={formData.email}
+                  onChange={handleChange}
+                  required
+                />
+                <label
+                  htmlFor="email"
+                  className="absolute top-0 left-0 h-full flex items-center pl-4 text-lg font-mono transform transition-all"
+                >
+                  Email
+                </label>
+              </div>
 
-                <div className="relative mt-14">
-                  <textarea
-                    id="message"
-                    className="block w-full h-auto min-h-[10rem] max-h-[20rem] sm:h-14 py-2 px-4 text-xl sm:text-2xl font-mono outline-none border-2 border-purple bg-transparent rounded-[0.6rem] transition-all duration-200"
-                    value={formData.message}
-                    onChange={handleChange}
-                    required
-                  />
-                  <label
-                    htmlFor="message"
-                    className="absolute top-0 left-0 h-14 flex items-center pl-4 text-lg font-mono transform transition-all"
-                  >
-                    Message
-                  </label>
-                </div>
-              </Fade>
+              <div className="relative mt-14">
+                <textarea
+                  id="message"
+                  className="block w-full h-auto min-h-[10rem] max-h-[20rem] sm:h-14 py-2 px-4 text-xl sm:text-2xl font-mono outline-none border-2 border-purple bg-transparent rounded-[0.6rem] transition-all duration-200"
+                  value={formData.message}
+                  onChange={handleChange}
+                  required
+                />
+                <label
+                  htmlFor="message"
+                  className="absolute top-0 left-0 h-14 flex items-center pl-4 text-lg font-mono transform transition-all"
+                >
+                  Message
+                </label>
+              </div>
 
               {mailerResponse !== "not initiated" &&
                 (mailerResponse === "success" ? (
