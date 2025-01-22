@@ -3,7 +3,7 @@ export const METADATA = {
   title: "AKB | ANURAG ARYAN",
   description:
     "Anurag Aryan is a Fullstack Developer focused on developing sleek, high-performance web applications that deliver exceptional user experiences through modern design and intuitive interfaces.",
-  siteUrl: "https://i-akb25.github.io/about-me/",
+  siteUrl: "https://ace-akb.vercel.app/",
   twitterHandle: "@i_official_akb",
   keywords: [
     "ANURAG ARYAN",
