@@ -144,7 +144,7 @@ export const PROJECTS = [
     description:
       "Make-A-Wish is a special project built to express the deepest emotions using ReactJS + NodeJS 💌",
     gradient: ["#000066", "#6699FF"],
-    url: "https://make-a-wish-two.vercel.app/",
+    url: "https://love-is-wish.vercel.app/",
     tech: ["react", "nodejs", "css"],
   },
   {
