@@ -3,6 +3,7 @@ import { MENULINKS, PROJECTS } from "../../constants";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import ProjectTile from "./ProjectTile/ProjectTile";
+import Image from "next/image";
 
 const Projects = ({ isDesktop, clientHeight }) => {
   const sectionRef = useRef(null);
@@ -99,7 +100,7 @@ const Projects = ({ isDesktop, clientHeight }) => {
             My Projects 
           </h1>
           <h2 className="text-[1.65rem] font-medium md:max-w-lg max-w-sm mt-2 staggered-reveal">
-          Here are a few creations crafted with passion, skill, and a touch of magic!{" "}
+            Here are a few creations crafted with passion, skill, and a touch of magic!{" "}
           </h2>
         </div>
         <div

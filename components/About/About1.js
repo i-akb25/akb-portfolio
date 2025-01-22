@@ -57,11 +57,11 @@ const About1 = ({ clientHeight }) => {
         >
           <span className="about-1 leading-tight">
             I&apos;m an engineer driven to develop robust, efficient, and impactful applications 
-            that stand the test of time."{" "}
+            that stand the test of time.{" "}
           </span>
           <span className="about-2 leading-tight">
-          "I am committed to delivering exceptional user experiences by leveraging modern 
-          frontend technologies and design principles."  {" "}
+            I am committed to delivering exceptional user experiences by leveraging modern 
+            frontend technologies and design principles.{" "}
           </span>
         </h2>
       </div>

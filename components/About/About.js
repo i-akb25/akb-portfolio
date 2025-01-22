@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from './About.module.scss';
 import Button from "../Button/Button";
+import Image from 'next/image';
 
 const About = () => {
   return (
@@ -16,17 +17,18 @@ const About = () => {
           </h1> 
         </div>
         <div className={styles.profile}>
-          <img
+          <Image
             className={styles.profileImage}
             src="/anurag.jpeg"
             alt="Profile"
+            width={500} // Specify the width
+            height={500} // Specify the height
           />
           <h2 className={styles.name}>ANURAG ARYAN</h2>
           <p className={styles.jobTitle}>Electrical Engineer</p>
           <Button href="mailto:anuragaryanofficial@gmail.com" classes="link" type="primary" style={{ marginTop: '20px' }}>
             Hire Me
           </Button>
-
         </div>
       </div>
 
