@@ -1,6 +1,6 @@
 export const displayFancyLogs = () => {
   console.log(
-    AKB PORTFOLIO,
+    AKB PORTFOLIO
     "color: #6b17e8;"
   );
 
