@@ -1,127 +1,166 @@
+.aboutSection {
+  width: 100%;
+  padding: 4rem 0 5rem;
+}
+
 .aboutContainer {
   display: grid;
-  grid-template-columns: 1fr 2fr;
-  gap: 4rem;
-  padding: 3rem 0;
-  max-width: 100%;
+  grid-template-columns: minmax(280px, 0.9fr) minmax(0, 1.8fr);
+  gap: 3rem;
+  align-items: flex-start;
+  width: min(100%, 1400px);
+  margin: 0 auto;
+  padding: 0 2rem;
 }
 
 .leftSection {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1.8rem;
+  min-width: 0;
 }
 
-.heading {
-  p {
-    text-transform: uppercase;
-    font-size: 0.75rem;
+.headingWrap {
+  margin-top: 1rem;
+
+  .kicker {
+    margin: 0 0 0.7rem;
+    font-size: 0.8rem;
     letter-spacing: 0.2em;
-    color: #9ca3af;
-    margin-bottom: 0.75rem;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.7);
+    font-weight: 600;
   }
 
   h1 {
-    font-size: clamp(2rem, 5vw, 3.5rem);
-    font-weight: 600;
-    line-height: 1.2;
+    font-size: clamp(3rem, 5vw, 6rem);
+    line-height: 0.95;
+    font-weight: 700;
+    letter-spacing: -0.06em;
   }
 }
 
-.profile {
+.profileCard {
+  width: min(100%, 430px);
   display: flex;
   flex-direction: column;
   align-items: center;
-  text-align: center;
-  gap: 1rem;
-  padding: 2rem;
-  border: 1px solid rgba(168, 85, 247, 0.2);
-  border-radius: 1rem;
-  background: rgba(17, 24, 39, 0.4);
+  padding: 2rem 1.5rem 1.8rem;
+  border-radius: 1.8rem;
+  background: rgba(17, 24, 39, 0.52);
+  border: 1px solid rgba(167, 139, 250, 0.15);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.02);
+}
 
-  .profileImage {
-    width: 200px !important;
-    height: 200px !important;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 2px solid rgba(168, 85, 247, 0.6);
-    transition: all 0.3s ease;
+.imageWrap {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, rgba(168, 85, 247, 0.26), rgba(59, 130, 246, 0.12));
+  display: grid;
+  place-items: center;
+  padding: 0.35rem;
+  border: 1px solid rgba(167, 139, 250, 0.45);
+}
 
-    &:hover {
-      border-color: #d8b4fe;
-      box-shadow: 0 0 20px rgba(168, 85, 247, 0.3);
-    }
-  }
+.profileImage {
+  width: 100% !important;
+  height: 100% !important;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+}
 
-  .name {
-    font-size: 1.5rem;
-    font-weight: 700;
-    letter-spacing: 0.05em;
-  }
+.name {
+  margin-top: 1.4rem;
+  font-size: clamp(1.7rem, 2vw, 2.3rem);
+  font-weight: 800;
+  letter-spacing: -0.04em;
+}
 
-  .jobTitle {
-    font-size: 0.95rem;
-    color: #d1d5db;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-  }
+.jobTitle {
+  margin-top: 0.5rem;
+  color: rgba(255, 255, 255, 0.7);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.hireButton {
+  margin-top: 1.5rem;
+  width: 160px;
+  justify-content: center;
 }
 
 .rightSection {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1.8rem;
+  padding-top: 4.5rem;
+}
+
+.contentBlock {
+  padding: 2rem 1.5rem 1.6rem;
+  border: 1px solid rgba(167, 139, 250, 0.16);
+  border-left: 3px solid rgba(167, 139, 250, 0.7);
+  border-radius: 1.1rem;
+  background: rgba(17, 24, 39, 0.45);
+  backdrop-filter: blur(6px);
 
   p {
+    color: rgba(255, 255, 255, 0.9);
     line-height: 1.8;
-    color: #e5e7eb;
-    font-size: 1rem;
+    font-size: clamp(1.05rem, 1.4vw, 1.45rem);
+    margin: 0;
   }
 
-  .aboutText,
-  .currentWork,
-  .openSource {
-    padding: 1.5rem;
-    border-left: 3px solid rgba(168, 85, 247, 0.4);
-    background: rgba(17, 24, 39, 0.3);
-    border-radius: 0.5rem;
-    transition: all 0.3s ease;
-
-    &:hover {
-      border-left-color: #d8b4fe;
-      background: rgba(17, 24, 39, 0.5);
-    }
-  }
-
-  .highlight {
-    color: #d8b4fe;
-    font-weight: 600;
-  }
-
-  .now {
-    font-weight: 700;
-    font-size: 1.1rem;
+  p + p {
+    margin-top: 1.1rem;
   }
 }
 
-/* Responsive Design */
+.nowTitle {
+  font-size: clamp(1.2rem, 1.8vw, 1.7rem) !important;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.96) !important;
+
+  span {
+    color: #d8b4fe;
+  }
+}
+
 @media (max-width: 1024px) {
   .aboutContainer {
     grid-template-columns: 1fr;
     gap: 2rem;
   }
-}
-
-@media (max-width: 768px) {
-  .aboutContainer {
-    padding: 2rem 0;
-  }
-
-  .heading h1 {
-    font-size: 2rem;
-  }
 
   .rightSection {
-    gap: 1.5rem;
+    padding-top: 0;
+  }
+}
+
+@media (max-width: 640px) {
+  .aboutSection {
+    padding-top: 2rem;
+  }
+
+  .aboutContainer {
+    padding: 0 1rem;
+  }
+
+  .profileCard {
+    width: 100%;
+    padding: 1.4rem 1rem 1.2rem;
+  }
+
+  .imageWrap {
+    width: 170px;
+    height: 170px;
+  }
+
+  .contentBlock {
+    padding: 1.25rem 1rem 1.1rem;
   }
 }
