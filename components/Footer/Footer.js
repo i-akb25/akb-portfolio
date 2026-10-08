@@ -11,6 +11,7 @@ const Footer = () => {
   const [playbackRate, setPlaybackRate] = useState(0.75);
   const [totalVisitors, setTotalVisitors] = useState(0);
   const [uniqueVisitors, setUniqueVisitors] = useState(0);
+  const [visitorError, setVisitorError] = useState(false);
 
   const heartClickSound = new Howl({
     src: ["/sounds/glug-a.mp3"],
@@ -25,11 +26,18 @@ const Footer = () => {
 
   useEffect(() => {
     const fetchVisitorData = async () => {
-      // Replace with your API endpoint
-      const response = await fetch('/api/visitor-count');
-      const data = await response.json();
-      setTotalVisitors(data.total);
-      setUniqueVisitors(data.unique);
+      try {
+        const response = await fetch("/api/visitor-count");
+        if (!response.ok) {
+          throw new Error("Failed to fetch visitor count");
+        }
+        const data = await response.json();
+        setTotalVisitors(data.total || 0);
+        setUniqueVisitors(data.unique || 0);
+      } catch (err) {
+        console.warn("Visitor count unavailable:", err.message);
+        setVisitorError(true);
+      }
     };
 
     fetchVisitorData();
@@ -47,7 +55,10 @@ const Footer = () => {
         <div className="section-container flex flex-col h-full justify-end z-10 items-center py-12">
           <h1 className="font-medium text-3xl md:text-4xl text-center">
             Feel free to connect on social media.
-            <p> <h4> Don&apos;t be a stranger 👨🏻‍💻 </h4></p>
+            <p>
+              {" "}
+              <h4> Don&apos;t be a stranger 👨🏻‍💻 </h4>
+            </p>
           </h1>
           <div className="text-center">
             <Profiles />
@@ -61,9 +72,12 @@ const Footer = () => {
               Let&apos;s Talk
             </Button>
           </div>
-          <div className="text-center text-white text-sm sm:text-base font-medium tracking-wide mt-8">
-            <span>Total Visitors: {totalVisitors}</span> | <span>Unique Visitors: {uniqueVisitors}</span>
-          </div>
+          {!visitorError && (
+            <div className="text-center text-white text-sm sm:text-base font-medium tracking-wide mt-8">
+              <span>Total Visitors: {totalVisitors}</span> |{" "}
+              <span>Unique Visitors: {uniqueVisitors}</span>
+            </div>
+          )}
           <p className="text-center text-white text-sm sm:text-base font-medium tracking-wide mt-8">
             Developed with{" "}
             <button onClick={handleClick} className="link cursor-none">
@@ -77,8 +91,9 @@ const Footer = () => {
       <img
         src="/footer-curve.svg"
         className="w-full rotate-180"
-        alt=""
+        alt="Footer decoration"
         loading="eager"
+        width={1440}
         height={180}
       />
     </footer>

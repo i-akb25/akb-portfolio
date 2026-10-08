@@ -6,8 +6,8 @@ import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import mail from "./mailer";
 import styles from "./Contact.module.scss";
 import { MENULINKS } from "../../constants";
-import Image from 'next/image'; // Import Image component from Next.js
-import akbImage from '../../public/akb-image.png'; // Import the image
+import Image from "next/image";
+import akbImage from "../../public/akb-image.png";
 
 const filter = new Filter();
 filter.removeWords("hell", "god", "shit");
@@ -268,7 +268,7 @@ const Contact = () => {
                 CONTACT
               </p>
               <h1 className="text-6xl mt-2 font-medium text-gradient w-fit staggered-reveal">
-                Contact 
+                Contact
               </h1>
             </div>
             <h2 className="text-[1.65rem] font-medium md:max-w-lg w-full mt-2 staggered-reveal">
@@ -280,6 +280,7 @@ const Contact = () => {
                 <input
                   type="text"
                   id="name"
+                  autoComplete="name"
                   className="block w-full h-12 sm:h-14 px-4 text-xl sm:text-2xl font-mono outline-none border-2 border-purple bg-transparent rounded-[0.6rem] transition-all duration-200"
                   value={formData.name}
                   onChange={handleChange}
@@ -295,8 +296,9 @@ const Contact = () => {
 
               <div className="relative mt-14">
                 <input
-                  type="text"
+                  type="email"
                   id="email"
+                  autoComplete="email"
                   className="block w-full h-12 sm:h-14 px-4 text-xl sm:text-2xl font-mono outline-none border-2 border-purple bg-transparent rounded-[0.6rem] transition-all duration-200"
                   value={formData.email}
                   onChange={handleChange}
@@ -313,7 +315,8 @@ const Contact = () => {
               <div className="relative mt-14">
                 <textarea
                   id="message"
-                  className="block w-full h-auto min-h-[10rem] max-h-[20rem] sm:h-14 py-2 px-4 text-xl sm:text-2xl font-mono outline-none border-2 border-purple bg-transparent rounded-[0.6rem] transition-all duration-200"
+                  autoComplete="off"
+                  className="block w-full h-auto min-h-[10rem] max-h-[20rem] sm:h-14 py-2 px-4 text-xl sm:text-2xl font-mono outline-none border-2 border-purple bg-transparent rounded-[0.6rem] transition-all duration-200 resize-none"
                   value={formData.message}
                   onChange={handleChange}
                   required
@@ -346,7 +349,7 @@ const Contact = () => {
                 }
                 onClick={handleSubmit}
               >
-                <span>Send {'->'}</span>
+                <span>Send {"->"}</span>
                 <span className={styles.success}>
                   <svg viewBox="0 0 16 16">
                     <polyline points="3.75 9 7 12 13 5"></polyline>
@@ -366,7 +369,14 @@ const Contact = () => {
           </div>
         </div>
         <div className="flex-1">
-          <Image className={styles.akbimg} src={akbImage} alt="Contact Image"  layout="responsive" /> {/* Adjust height as needed */}
+          <Image
+            className={styles.akbimg}
+            src={akbImage}
+            alt="Contact Image"
+            layout="responsive"
+            width={500}
+            height={500}
+          />
         </div>
       </div>
       <style jsx global>{`
