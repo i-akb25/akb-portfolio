@@ -51,12 +51,16 @@ export default function Home() {
   return (
     <>
     <div className="reference-banner">
-        Reference portfolio preview — the live maintained site is 
-        <a href="https://akbanurag.vercel.app/" target="_blank" rel="noreferrer"> 
-          akbanurag.vercel.app 
-        </a>
-        . This repository is only for reference and may be updated independently for more information visit AKB STUDIO (akbanurag.vercel.app).
-      </div>
+  Archived portfolio reference. Visit the current website at{" "}
+  <a
+    href="https://akbanurag.vercel.app/"
+    target="_blank"
+    rel="noreferrer"
+  >
+    AKB Studio
+  </a>
+  .
+</div>
       {isLoading ? (
         <Loader />
       ) : (
