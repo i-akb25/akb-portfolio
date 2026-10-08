@@ -1,5 +1,7 @@
 # ✨ Personal Portfolio | Anurag Aryan
 
+> Reference note: This repository is a portfolio reference project only. The live, maintained site for the user is https://ace-akb.vercel.app/.
+
 ![GitHub repo size](https://img.shields.io/github/repo-size/i-akb25/akb-portfolio?color=ff69b4&style=flat-square) ![GitHub stars](https://img.shields.io/github/stars/i-akb25/akb-portfolio?style=social) ![GitHub last commit](https://img.shields.io/github/last-commit/i-akb25/akb-portfolio?color=ff69b4&style=flat-square) [![Website](https://img.shields.io/website?down_color=red&down_message=Offline&up_color=green&up_message=Online&url=https%3A%2F%2Face-akb.vercel.app%2F)](https://ace-akb.vercel.app/) [![GitHub repo](https://img.shields.io/badge/GitHub-Repository-blue)](https://github.com/i-akb25/akb-portfolio)
 
 Welcome to the personal portfolio repository of **Anurag Aryan**! 🚀 Explore my journey in engineering, full-stack development, robotics, IoT, and drones through this interactive and captivating website.  
@@ -95,4 +97,5 @@ For inquiries or collaboration, feel free to reach out:
 ---
 
 Made with ❤️ by **Anurag Aryan** ✨
+
 
