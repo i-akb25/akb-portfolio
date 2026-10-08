@@ -1,16 +1,15 @@
 /* eslint-disable @next/next/no-img-element */
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { Howl } from "howler";
 import Button from "../Button/Button";
 import FooterBg from "./FooterBg/FooterBg";
 import Profiles from "../Profiles/Profiles";
 import { theme } from "tailwind.config";
 import { MENULINKS } from "../../constants";
+import VisitorCount from "./VisitorCount";
 
 const Footer = () => {
   const [playbackRate, setPlaybackRate] = useState(0.75);
-  const [totalVisitors, setTotalVisitors] = useState(0);
-  const [uniqueVisitors, setUniqueVisitors] = useState(0);
 
   const heartClickSound = new Howl({
     src: ["/sounds/glug-a.mp3"],
@@ -23,17 +22,6 @@ const Footer = () => {
     heartClickSound.play();
   };
 
-  useEffect(() => {
-    const fetchVisitorData = async () => {
-      // Replace with your API endpoint
-      const response = await fetch('/api/visitor-count');
-      const data = await response.json();
-      setTotalVisitors(data.total);
-      setUniqueVisitors(data.unique);
-    };
-
-    fetchVisitorData();
-  }, []);
 
   return (
     <footer
@@ -61,9 +49,7 @@ const Footer = () => {
               Let&apos;s Talk
             </Button>
           </div>
-          <div className="text-center text-white text-sm sm:text-base font-medium tracking-wide mt-8">
-            <span>Total Visitors: {totalVisitors}</span> | <span>Unique Visitors: {uniqueVisitors}</span>
-          </div>
+          <VisitorCount />
           <p className="text-center text-white text-sm sm:text-base font-medium tracking-wide mt-8">
             Developed with{" "}
             <button onClick={handleClick} className="link cursor-none">
