@@ -1,127 +1,128 @@
 .aboutContainer {
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  gap: 4rem;
-  padding: 3rem 0;
-  max-width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 40px; /* Original padding */
+  margin-left: 42px; /* Adjusted left margin */
+  margin-right: 42px;
+  color: #fff;
 }
 
 .leftSection {
+  flex: 1; /* Occupy equal space */
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  align-items: flex-start; /* Align content to the left */
 }
 
 .heading {
+  margin-bottom: 20px;
+
   p {
     text-transform: uppercase;
-    font-size: 0.75rem;
-    letter-spacing: 0.2em;
-    color: #9ca3af;
-    margin-bottom: 0.75rem;
+    font-size: 1rem;
+    color: #aaa;
+    letter-spacing: 2px;
   }
 
   h1 {
-    font-size: clamp(2rem, 5vw, 3.5rem);
-    font-weight: 600;
-    line-height: 1.2;
+    font-size: 3rem;
+    background: linear-gradient(90deg, hsl(279, 77%, 32%)270360);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
 }
 
 .profile {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  margin-top: 50px;
   text-align: center;
-  gap: 1rem;
-  padding: 2rem;
-  border: 1px solid rgba(168, 85, 247, 0.2);
-  border-radius: 1rem;
-  background: rgba(17, 24, 39, 0.4);
+  align-content: center;
+  align-items: center;
+  margin-left: 20px;
 
   .profileImage {
-    width: 200px !important;
-    height: 200px !important;
     border-radius: 50%;
+    width: 180px;
+    height: 180px;
     object-fit: cover;
-    border: 2px solid rgba(168, 85, 247, 0.6);
-    transition: all 0.3s ease;
-
-    &:hover {
-      border-color: #d8b4fe;
-      box-shadow: 0 0 20px rgba(168, 85, 247, 0.3);
-    }
+    border: 3px solid #930cd6;
+    margin-bottom: 10px;
+    align-content: center !important;
+    margin-left: 20px;
   }
 
   .name {
     font-size: 1.5rem;
-    font-weight: 700;
-    letter-spacing: 0.05em;
+    font-weight: bold;
+    align-content: center;
   }
 
   .jobTitle {
-    font-size: 0.95rem;
-    color: #d1d5db;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
+    font-size: 1rem;
+    color: #ccc;
+    // margin: 5px 0;
+    align-content: center;
+  }
+
+  .hireButton {
+    padding: 10px 30px;
+    align-content: center;
+
+    .link {
+      color: white;
+      text-decoration: none;
+    }
   }
 }
 
 .rightSection {
+  flex: 2; /* Occupy more space */
+  margin-top: 100px; /* Adjust paragraph starting position */
   display: flex;
   flex-direction: column;
-  gap: 2rem;
-
-  p {
-    line-height: 1.8;
-    color: #e5e7eb;
-    font-size: 1rem;
-  }
+  gap: 15px;
 
   .aboutText,
   .currentWork,
   .openSource {
-    padding: 1.5rem;
-    border-left: 3px solid rgba(168, 85, 247, 0.4);
-    background: rgba(17, 24, 39, 0.3);
-    border-radius: 0.5rem;
-    transition: all 0.3s ease;
-
-    &:hover {
-      border-left-color: #d8b4fe;
-      background: rgba(17, 24, 39, 0.5);
-    }
+    line-height: 1.8;
+    text-align: justify;
+    margin-bottom: 20px;
   }
 
   .highlight {
-    color: #d8b4fe;
-    font-weight: 600;
+    color: #ff4f00;
+    font-weight: bold;
   }
 
-  .now {
-    font-weight: 700;
-    font-size: 1.1rem;
+  .mailLink,
+  .whatsappLink {
+    color: #ff4f00;
+    text-decoration: none;
+    font-weight: bold;
+
+    &:hover {
+      text-decoration: underline;
+      color: #ffaa00;
+    }
+  }
+
+  .interest {
+    font-style: italic;
+    color: #0e55c8;
   }
 }
 
 /* Responsive Design */
-@media (max-width: 1024px) {
-  .aboutContainer {
-    grid-template-columns: 1fr;
-    gap: 2rem;
-  }
-}
-
 @media (max-width: 768px) {
   .aboutContainer {
-    padding: 2rem 0;
-  }
-
-  .heading h1 {
-    font-size: 2rem;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px; /* Smaller margin for small screens */
   }
 
   .rightSection {
-    gap: 1.5rem;
+    margin-top: 30px; /* Adjusted for smaller screens */
   }
 }
