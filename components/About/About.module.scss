@@ -41,11 +41,11 @@
 }
 
 .profileCard {
-  width: min(100%, 430px);
+  width: min(100%, 360px);
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 2rem 1.5rem 1.8rem;
+  padding: 1.6rem 1.25rem 1.5rem;
   border-radius: 1.8rem;
   background: rgba(17, 24, 39, 0.52);
   border: 1px solid rgba(167, 139, 250, 0.15);
@@ -53,13 +53,13 @@
 }
 
 .imageWrap {
-  width: 200px;
-  height: 200px;
+  width: 150px;
+  height: 150px;
   border-radius: 50%;
   background: linear-gradient(135deg, rgba(168, 85, 247, 0.26), rgba(59, 130, 246, 0.12));
   display: grid;
   place-items: center;
-  padding: 0.35rem;
+  padding: 0.3rem;
   border: 1px solid rgba(167, 139, 250, 0.45);
 }
 
@@ -72,24 +72,24 @@
 }
 
 .name {
-  margin-top: 1.4rem;
-  font-size: clamp(1.7rem, 2vw, 2.3rem);
+  margin-top: 1.1rem;
+  font-size: clamp(1.5rem, 2vw, 2rem);
   font-weight: 800;
   letter-spacing: -0.04em;
 }
 
 .jobTitle {
-  margin-top: 0.5rem;
+  margin-top: 0.4rem;
   color: rgba(255, 255, 255, 0.7);
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  font-size: 0.8rem;
+  font-size: 0.75rem;
   font-weight: 600;
 }
 
 .hireButton {
-  margin-top: 1.5rem;
-  width: 160px;
+  margin-top: 1.3rem;
+  width: 150px;
   justify-content: center;
 }
 
@@ -152,12 +152,12 @@
 
   .profileCard {
     width: 100%;
-    padding: 1.4rem 1rem 1.2rem;
+    padding: 1.25rem 1rem 1rem;
   }
 
   .imageWrap {
-    width: 170px;
-    height: 170px;
+    width: 130px;
+    height: 130px;
   }
 
   .contentBlock {
