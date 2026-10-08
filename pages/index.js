@@ -50,13 +50,6 @@ export default function Home() {
 
   return (
     <>
-      <div className="reference-banner">
-        Reference portfolio preview — the live maintained site is
-        <a href="https://ace-akb.vercel.app/" target="_blank" rel="noreferrer">
-          ace-akb.vercel.app
-        </a>
-        . This repository is only for reference and may be updated independently.
-      </div>
       {isLoading ? (
         <Loader />
       ) : (

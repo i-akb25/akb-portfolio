@@ -40,45 +40,6 @@ html {
 body {
   box-sizing: border-box;
   @apply bg-black text-white overflow-x-hidden;
-  background-image:
-    radial-gradient(circle at top left, rgba(168, 85, 247, 0.18), transparent 30%),
-    radial-gradient(circle at top right, rgba(45, 212, 191, 0.12), transparent 25%),
-    linear-gradient(180deg, #050816 0%, #0d1020 100%);
-  background-attachment: fixed;
-}
-
-main {
-  position: relative;
-  isolation: isolate;
-}
-
-.reference-banner {
-  position: sticky;
-  top: 0;
-  z-index: 50;
-  width: 100%;
-  padding: 0.72rem 1rem;
-  background: rgba(17, 17, 24, 0.9);
-  border-bottom: 1px solid rgba(168, 85, 247, 0.45);
-  color: #f3f4f6;
-  text-align: center;
-  font-size: 0.72rem;
-  letter-spacing: 0.04em;
-  line-height: 1.5;
-  backdrop-filter: blur(12px);
-  box-shadow: 0 8px 30px rgba(10, 10, 20, 0.4);
-
-  a {
-    color: #d8b4fe;
-    text-decoration: underline;
-    text-underline-offset: 0.2rem;
-    font-weight: 600;
-    transition: opacity 0.25s ease;
-
-    &:hover {
-      opacity: 0.8;
-    }
-  }
 }
 
 ::-webkit-scrollbar {
@@ -90,14 +51,14 @@ main {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: rgba(168, 85, 247, 0.8);
+  background: rgba(112, 0, 255, 0.75);
   opacity: 0.5;
   border-radius: 1rem;
   transition: all 0.2s;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba(139, 92, 246, 1);
+  background: theme("colors.indigo.dark");
   opacity: 1;
 }
 
@@ -126,19 +87,6 @@ main {
 a,
 input[type="checkbox"] {
   cursor: none !important;
-}
-
-.text-gradient {
-  background: linear-gradient(
-    to right,
-    #d8b4fe 0%,
-    #a78bfa 30%,
-    #7dd3fc 65%,
-    #c4b5fd 100%
-  );
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
 }
 
 .outer-menu {
@@ -235,6 +183,7 @@ input[type="checkbox"] {
       box-shadow: 0 4px 0 rgba(255, 255, 255, 0.2);
       transition: all 0.4s ease-in-out;
 
+      // Different height bars
       &:nth-child(1) {
         transform: scaleY(0.8);
       }
@@ -249,6 +198,7 @@ input[type="checkbox"] {
     &.play > span {
       animation: sound-bars-animation 2s infinite alternate-reverse;
 
+      // Scatter animations
       &:nth-child(1) {
         animation-delay: 0.4s;
       }
@@ -298,7 +248,15 @@ input[type="checkbox"] {
       border-radius: 50%;
       transition: all 0.4s ease;
       backface-visibility: hidden;
-      background: rgba(0, 0, 0, 0.82);
+      background: rgba(
+        0,
+        0,
+        0,
+        0.8
+      ); //check it out later when more text is on the background to change the opacity
+      // @supports not (backdrop-filter: blur(0.625rem)) {
+      //   background: rgba(0, 0, 0, 0.8);
+      // }
 
       > div {
         max-width: 90vw;
@@ -341,7 +299,19 @@ input[type="checkbox"] {
   }
 }
 
+.text-gradient {
+  background: linear-gradient(
+    to right,
+    theme("colors.indigo.light"),
+    theme("colors.indigo.dark")
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 @keyframes sound-bars-animation {
+  // 0% - 50% uses inherited properties
   50% {
     opacity: 0.2;
     transform: scaleY(0.2);
@@ -835,11 +805,4 @@ $bg: #f4faff;
 
 #mouth-frown {
   visibility: hidden;
-}
-
-@media (max-width: 768px) {
-  .reference-banner {
-    font-size: 0.68rem;
-    padding: 0.7rem 0.85rem;
-  }
 }
