@@ -1,6 +1,10 @@
 export const displayFancyLogs = () => {
   console.log(
-    AKB PORTFOLIO
+    "%c    _    _  _______    ____   ___  ____ _____ _____ ___  _     ___ ___  \n" +
+    "   / \\  | |/ / __ )  |  _ \\ / _ \\|  _ \\_   _|  ___/ _ \\| |   |_ _/ _ \\ \n" +
+    "  / _ \\ | ' /|  _ \\  | |_) | | | | |_) || | | |_ | | | | |    | | | | |\n" +
+    " / ___ \\| . \\| |_) | |  __/| |_| |  _ < | | |  _|| |_| | |___ | | |_| |\n" +
+    "/_/   \\_\\_|\\_\\____/  |_|    \\___/|_| \\_\\|_| |_|   \\___/|_____|___\\___/ \n",
     "color: #6b17e8;"
   );
 
@@ -9,7 +13,6 @@ export const displayFancyLogs = () => {
     "color: #6b17e8; padding: 6px;"
   );
 
-  // Easter egg hint
   console.log(
     "%c 💡 Psst! There's a secret hiding in plain sight. Follow your heart, it might lead to something... interesting.",
     "color: #6b17e8; font-style: italic; padding: 6px;"
