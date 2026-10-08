@@ -50,17 +50,37 @@ export default function Home() {
 
   return (
     <>
-    <div className="reference-banner">
-  Archived portfolio reference. Visit the current website at{" "}
-  <a
-    href="https://akbanurag.vercel.app/"
-    target="_blank"
-    rel="noreferrer"
-  >
-    AKB Studio
-  </a>
-  .
-</div>
+      <div
+        className="reference-banner"
+        style={{
+          width: "100%",
+          padding: "10px 16px",
+          textAlign: "center",
+          fontSize: "14px",
+          lineHeight: 1.4,
+          color: "#d1d1d1",
+          background: "#0b0b0b",
+          borderBottom: "1px solid rgba(255,255,255,0.08)",
+          position: "relative",
+          zIndex: 9999,
+        }}
+      >
+        Archived portfolio reference. Visit the current website at{" "}
+        <a
+          href="https://akbanurag.vercel.app/"
+          target="_blank"
+          rel="noreferrer"
+          style={{
+            color: "#7c3cff",
+            fontWeight: 600,
+            textDecoration: "none",
+          }}
+        >
+          AKB Studio
+        </a>
+        .
+      </div>
+
       {isLoading ? (
         <Loader />
       ) : (
